@@ -40,8 +40,12 @@
             <p>{{dishCtrl.dish.description}}</p>
           </div>
           <div class="col-xs-9 col-xs-offset-1">
+            <div class="form-group">
+              <label for="ordrBy">Order Comments by:</label>
+              <input type="text" class="form-control" id="ordrBy" style="width:15em;" ng-model="cmtOrder">
+            </div>
             <!--Put the comments here-->
-            <blockquote ng-repeat="cmt in dishCtrl.dish.comments">
+            <blockquote ng-repeat="cmt in dishCtrl.dish.comments | orderBy:cmtOrder">
               <p>{{cmt.comment}}</p>
               <footer>{{cmt.author}} at {{cmt.date | date:'h:ma on M/d/y'}}</footer>
             </blockquote>
