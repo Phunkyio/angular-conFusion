@@ -22,3 +22,6 @@ v0.05
 
 v0.06
 -updated dishdetail.html and app.js
+
+v0.07
+- added form to dishdetail.html for comments
