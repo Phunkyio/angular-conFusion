@@ -161,6 +161,7 @@ angular.module('confusionApp', [])
   //Step 1: Create a JavaScript object to hold the comment from the form
   //Task 1: Use JS object in the controller to keep track of the information.
   //Task 1: Use two-way dat binding between the form fields and the JS object.
+  //ng-init and ng-checked in current version of AngularJS are bugged, decided to initialize rating here.
   $scope.newComment = {
     name: "",
     rating: "5",
@@ -169,18 +170,26 @@ angular.module('confusionApp', [])
   };
 
   $scope.submitComment = function() {
-
-    alert("success!");
+    //Task 3: Upon submitting the valid comment, the comment should join the regular comments on the page. The date for the comment should be set automatically upon submission of the form.
     //Step 2: This is how you record the date
-    newComment[date] = new Date().toISOString();
+    $scope.newComment.date = new Date().toISOString();
+
+    //not part of the assignment but this makes it so the comment works with sorting implemented previously
+    $scope.newComment.rating = parseInt($scope.newComment.rating, 10);
 
     // Step 3: Push your comment into the dish's comment array
-    $scope.dish.comments.push(newComment);
+    $scope.dish.comments.push($scope.newComment);
 
     //Step 4: reset your form to pristine
-    $scope.newComments.$setPristine();
+    $scope.commentForm.$setPristine();
 
     //Step 5: reset your JavaScript object that holds your comment
+    $scope.newComment = {
+      author: "",
+      rating: "5",
+      comment: "",
+      date: ""
+    };
   }
 }])
 

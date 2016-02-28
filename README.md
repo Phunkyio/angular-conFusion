@@ -25,3 +25,5 @@ v0.06
 
 v0.07
 - added form to dishdetail.html for comments
+- added validation for form and error warnings.
+- push user submission to comment array.
