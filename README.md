@@ -11,3 +11,14 @@ v0.03
 - added grunt modules: usemin, concat, cssmin, uglify, and filerev for dist folder
 - configured new grunt modules in gruntfile.js
 - added grunt modules: watch, connect, and serve for web server
+
+v0.04
+- removed grunt from node_modules and package.json
+- installed gulp and gulp modules
+
+v0.05
+- removed nodejs modules
+- two way binding on contactus page.
+
+v0.06
+-updated dishdetail.html and app.js
