@@ -21,9 +21,13 @@ v0.05
 - two way binding on contactus page.
 
 v0.06
--updated dishdetail.html and app.js
+- updated dishdetail.html and app.js
 
 v0.07
 - added form to dishdetail.html for comments
 - added validation for form and error warnings.
 - push user submission to comment array.
+
+v0.08
+- removed controllers from app.js and moved them to controller.js
+- added dependency injection to controllers
