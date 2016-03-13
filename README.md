@@ -31,3 +31,7 @@ v0.07
 v0.08
 - removed controllers from app.js and moved them to controller.js
 - added dependency injection to controllers
+
+v0.09
+- added 2 factory functions and 1 service function to services.js
+- added IndexController and AboutController controllers to controllers.js
